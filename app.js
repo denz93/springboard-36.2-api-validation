@@ -8,9 +8,10 @@ app.use(express.json());
 
 const ExpressError = require("./expressError")
 const bookRoutes = require("./routes/books");
+const authorRoutes = require("./routes/authors");
 
 app.use("/books", bookRoutes);
-
+app.use("/authors", authorRoutes);
 /** 404 handler */
 
 app.use(function (req, res, next) {
